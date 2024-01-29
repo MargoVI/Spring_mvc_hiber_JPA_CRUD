@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.models.User;
-import web.dao.UserDao;
 import web.service.UserService;
 
 import javax.validation.Valid;
