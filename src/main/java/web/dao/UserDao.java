@@ -1,4 +1,4 @@
-package web.services;
+package web.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @Repository
 @Transactional(readOnly = true)
-public class UsersService {
+public class UserDao {
 
     @PersistenceContext
     private final EntityManager entityManager;
 
     @Autowired
-    public UsersService(EntityManager entityManager) {
+    public UserDao(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 

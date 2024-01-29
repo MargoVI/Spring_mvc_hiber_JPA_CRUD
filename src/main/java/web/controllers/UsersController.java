@@ -6,7 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import web.models.User;
-import web.services.UsersService;
+import web.dao.UserDao;
+import web.service.UserService;
 
 import javax.validation.Valid;
 
@@ -14,10 +15,10 @@ import javax.validation.Valid;
 @RequestMapping("/users")
 public class UsersController {
 
-    private final UsersService usersService;
+    private final UserService usersService;
 
     @Autowired
-    public UsersController(UsersService usersService) {
+    public UsersController(UserService usersService) {
         this.usersService = usersService;
     }
 
